@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/loom/__init__.py
+src/loom/loom.py
+src/loom.egg-info/PKG-INFO
+src/loom.egg-info/SOURCES.txt
+src/loom.egg-info/dependency_links.txt
+src/loom.egg-info/top_level.txt

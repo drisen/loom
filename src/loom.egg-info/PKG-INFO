@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: loom
+Version: 1.0
+Summary: "Map-Reduce in threads"
+Home-page: https://github.com/drisen/loom
+Author: "Dennis Risen"
+Author-email: "dar5@case.edu"
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/drisen/loom/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Licence :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# loom
+A simple map-reduce implemented in concurrent threads.
+
+**loom**(producer, mapfunc, consumer)
+ Distributes items from a producer Generator in a new thread through a farm of
+  created mapping-function threads to a consumer in the calling thread.
+
+
