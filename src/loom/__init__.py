@@ -1,2 +1,2 @@
-from loom import loom
-__all__ = ['loom']
+from .loom import loom, Queue
+__all__ = ['loom', 'Queue']

@@ -3,6 +3,7 @@
 # Copyright (C) 2019 Dennis Risen, Case Western Reserve University
 #
 """ To Do
+
 Parameterize the Queue class to queue objects rather than Sequences
 Refactor parameter names
 """
@@ -13,12 +14,12 @@ from typing import Callable, Iterable, Sequence
 
 # direct threading is incompatible with threading
 # When used in a Panda3d program, use direct.stdpy.threading instead
-import sys
-if 'direct.stdpy.threading' in sys.modules:
-    import direct.stdpy.threading as threading
+# import sys
+# if 'direct.stdpy.threading' in sys.modules:
+#     import direct.stdpy.threading as threading
     # print("Using direct.stdpy.threading as threading")
-else:
-    import threading
+# else:
+import threading
 
 
 class Queue:

@@ -9,7 +9,7 @@ License: UNKNOWN
 Project-URL: Bug Tracker, https://github.com/drisen/loom/issues
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
-Classifier: Licence :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Licence :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
