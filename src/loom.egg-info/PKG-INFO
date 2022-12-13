@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: loom
-Version: 1.0
+Version: 1.0.1
 Summary: "Map-Reduce in threads"
 Home-page: https://github.com/drisen/loom
 Author: "Dennis Risen"

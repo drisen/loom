@@ -17,7 +17,7 @@ from typing import Callable, Iterable, Sequence
 # import sys
 # if 'direct.stdpy.threading' in sys.modules:
 #     import direct.stdpy.threading as threading
-    # print("Using direct.stdpy.threading as threading")
+#     print("Using direct.stdpy.threading as threading")
 # else:
 import threading
 
@@ -30,24 +30,37 @@ class Queue:
         self.put_semaphore = threading.Semaphore(maxsize)
         self.get_semaphore = threading.Semaphore(0)
         self.lock = threading.Lock()
-        self.queue = []  # the (LIFO) queue data is here
+        self.queue = []                 # the (LIFO) queue data is here
 
     def get(self) -> Sequence:
-        self.get_semaphore.acquire()  # wait for available entry
-        self.lock.acquire()  # in case pop(0) is not atomic
+        """Pop the last entry from queue
+
+        :return:
+        """
+        self.get_semaphore.acquire()    # wait for available entry
+        self.lock.acquire()             # in case pop(0) is not atomic
         entry = self.queue.pop(0)
         self.lock.release()
-        self.put_semaphore.release()  # its slot is now available
+        self.put_semaphore.release()    # its slot is now available
         return entry
 
     def put(self, val: Sequence):
-        self.put_semaphore.acquire()  # wait for a slot in the queue
-        self.lock.acquire()  # append might not be atomic
-        self.queue.append(val)  # GIL-atomic add to the queue
+        """Put val onto front of queue
+
+        :param val:
+        :return:
+        """
+        self.put_semaphore.acquire()    # wait for a slot in the queue
+        self.lock.acquire()             # append might not be atomic
+        self.queue.append(val)          # GIL-atomic add to the queue
         self.lock.release()
-        self.get_semaphore.release()  # entry is available for get
+        self.get_semaphore.release()    # entry is available for get
 
     def qsize(self) -> int:
+        """return length of the queue
+
+        :return:
+        """
         return len(self.queue)
 
 
