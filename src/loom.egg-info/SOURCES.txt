@@ -1,7 +1,6 @@
 LICENSE
 README.md
 pyproject.toml
-setup.cfg
 src/loom/__init__.py
 src/loom/loom.py
 src/loom.egg-info/PKG-INFO
