@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: loom
-Version: 1.0.3
+Version: 1.0.4
 Summary: Map-Reduce in threads
 Author-email: Dennis Risen <dar5@case.edu>
 License:                     GNU GENERAL PUBLIC LICENSE

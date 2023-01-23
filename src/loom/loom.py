@@ -3,14 +3,12 @@
 # Copyright (C) 2019 Dennis Risen, Case Western Reserve University
 #
 """ To Do
-
-Parameterize the Queue class to queue objects rather than Sequences
 Refactor parameter names
 """
 
 import time
 import traceback
-from typing import Callable, Iterable, Sequence
+from typing import Any, Callable, Iterable, List, Sequence
 
 # direct threading is incompatible with threading
 # When used in a Panda3d program, use direct.stdpy.threading instead
@@ -30,9 +28,9 @@ class Queue:
         self.put_semaphore = threading.Semaphore(maxsize)
         self.get_semaphore = threading.Semaphore(0)
         self.lock = threading.Lock()
-        self.queue = []                 # the (LIFO) queue data is here
+        self.queue: List[Any] = []                 # the (FIFO) queue data is here
 
-    def get(self) -> Sequence:
+    def get(self) -> Any:
         """Pop the last entry from queue
 
         :return:
@@ -44,7 +42,7 @@ class Queue:
         self.put_semaphore.release()    # its slot is now available
         return entry
 
-    def put(self, val: Sequence):
+    def put(self, val: Any):
         """Put val onto front of queue
 
         :param val:
@@ -95,6 +93,9 @@ def loom(producer: Iterable, mapfunc: Callable, consumer: Callable,
     if consumer_kwargs is None:
         consumer_kwargs = {}
 
+    # Each entry in a Queue is (Union[True, None], Object), where entry[0] is:
+    # True --> request or result
+    # None --> command to exit, or exit acknowledgment
     work_q = Queue(maxsize=2*mappers)   # queue from _producer to _mapper
     result_q = Queue(maxsize=2*mappers)  # queue from _mapper to _results
     counter_lock = threading.Lock()     # for locking +=, -= operations
@@ -134,7 +135,7 @@ def loom(producer: Iterable, mapfunc: Callable, consumer: Callable,
                     print(f"{result_cnt} items processed in {time.time()-start_time} seconds")
                 yield item[1]
             else:						# a mapper has exited?
-                counter_lock.acquire()  # -= is not atomic
+                counter_lock.acquire()  # because -= is not atomic
                 mapper_cnt -= 1			#
                 counter_lock.release()
 
