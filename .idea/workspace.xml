@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eee1bd2-4ab4-4ccb-a469-3c717df0e98b" name="Changes" comment="moved build requirements from requirements.txt to minimum versions in pyproject.toml&#10;added run steps to --upgrade pip and build">
+    <list default="true" id="9eee1bd2-4ab4-4ccb-a469-3c717df0e98b" name="Changes" comment="cleanup some IDE warnings">
       <change beforePath="$PROJECT_DIR$/.idea/loom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/loom.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/setup.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loom/loom.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/loom/loom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loom.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/src/loom.egg-info/PKG-INFO" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,18 +34,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../collect" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
-      <console-settings module-name="loom" sdk-home="C:\Users\dar5\AppData\Local\Programs\Python\Python36\python.exe">
-        <option name="mySdkHome" value="C:\Users\dar5\AppData\Local\Programs\Python\Python36\python.exe" />
+      <console-settings module-name="loom" sdk-home="C:\Users\dar5\PyCharmProjects\loom\venv\Scripts\python.exe">
+        <option name="mySdkHome" value="C:\Users\dar5\PyCharmProjects\loom\venv\Scripts\python.exe" />
         <option name="myModuleName" value="loom" />
       </console-settings>
     </option>
   </component>
-  <component name="RunManager" selected="Python.build">
+  <component name="RunManager" selected="Python.upgrade pip build">
     <configuration name="build" type="PythonConfigurationType" factoryName="Python">
       <module name="loom" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -53,7 +53,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\dar5\AppData\Local\Programs\Python\Python36\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\dar5\PyCharmProjects\loom\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -95,13 +95,13 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\dar5\AppData\Local\Programs\Python\Python36\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\dar5\PyCharmProjects\loom\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="pip" />
-      <option name="PARAMETERS" value="install --upgrade pip build setuptools wheel" />
+      <option name="PARAMETERS" value="install --upgrade pip build setuptools" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="true" />
@@ -136,7 +136,49 @@
       <option name="project" value="LOCAL" />
       <updated>1649509116312</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="verified build">
+      <created>1670957622190</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670957622190</updated>
+    </task>
+    <task id="LOCAL-00003" summary="verified build">
+      <created>1670957694802</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670957694802</updated>
+    </task>
+    <task id="LOCAL-00004" summary="verified build">
+      <created>1670991235726</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670991235726</updated>
+    </task>
+    <task id="LOCAL-00005" summary="minor version number">
+      <created>1671144932892</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671144932892</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updaged build to pure toml">
+      <created>1671919668147</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671919668148</updated>
+    </task>
+    <task id="LOCAL-00007" summary="cleanup some IDE warnings">
+      <created>1674513231329</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674513231329</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +195,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="moved build requirements from requirements.txt to minimum versions in pyproject.toml&#10;added run steps to --upgrade pip and build" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved build requirements from requirements.txt to minimum versions in pyproject.toml&#10;added run steps to --upgrade pip and build" />
+    <MESSAGE value="verified build" />
+    <MESSAGE value="minor version number" />
+    <MESSAGE value="updaged build to pure toml" />
+    <MESSAGE value="cleanup some IDE warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup some IDE warnings" />
   </component>
 </project>
